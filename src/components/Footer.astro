@@ -1,12 +1,14 @@
 ---
 const founderDate = new Date(1999, 7, 26);
 const   today = new Date();
+import { Image } from "astro:assets";
+import logo from "../../public/assets/img/misc/logo.png";
 ---
 
 <footer class="container py-5">
   <div class="row">
     <div class="col-12 col-md">
-      <img src="../../../assets/img/misc/logo.png" alt="logo etna vidraçaria">
+      <Image src={logo} alt="logo etna vidraçaria">
       <small class="d-block mb-3 text-body-secondary">Vidraçaria Etna ltda ©
         {founderDate.getFullYear()}–{today.getFullYear()}<br>
         CNPJ: 03.273.410/0001-02</small>
