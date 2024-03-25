@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import newTemper from '../../public/assets/img/marcas/new-temper.png';
-import Al from '../../public/assets/img/marcas/al.png';
+import al from '../../public/assets/img/marcas/al.png';
 import makit from '../../public/assets/img/marcas/makit.png';
 import Image from 'astro/components/Image.astro';
+
 const reviews = [
     {
       id: 1,
@@ -44,11 +45,11 @@ const reviews = [
   ];
 ---
 
-<Layout title="Vidracaria Etna">
+<Layout title="Etna vidros - Atendemos em todo o Rio de Janeiro">
 
 	<main>
 		<div class="bg-custom text-secondary px-4 py-5 text-center">
-			<div class="py-5">
+			<div class="py-5 ">
 				<div class="glass-effect p-5 col-sm-12 col-md-6 mx-auto text-start">
 					<h1 class="display-4 fw-bold text-start "
 						style="color: #fefefe; text-shadow:  1px 2px #05a4ea, 1px 3px #9cd9eb">
@@ -127,7 +128,7 @@ const reviews = [
 								<ul class="d-flex list-unstyled mt-auto">
 									<li class="d-flex align-items-center me-3">
 										<i class="bi bi-palette-fill me-1"></i>
-										<small>Branco ou preto</small>
+										<small>Cores diversas</small>
 									</li>
 									<li class="d-flex align-items-center">
 										<i class="bi bi-rulers me-1"></i>
@@ -167,7 +168,7 @@ const reviews = [
 								<ul class="d-flex list-unstyled mt-auto">
 									<li class="d-flex align-items-center me-3">
 										<i class="bi bi-palette-fill me-1"></i>
-										<small>Branco ou preto</small>
+										<small>Cores diversas</small>
 									</li>
 									<li class="d-flex align-items-center">
 										<i class="bi bi-rulers me-1"></i>
@@ -218,10 +219,10 @@ const reviews = [
 			<div class="container px-4 py-3" id="custom-cards">
 				<div class="row g-4 py-5 ">
 					<div class="d-flex align-items-center flex-column flex-lg-row justify-content-center marcas">
-						<Image src={newTemper} style="height: min-content;" alt="logo empresa new temper">
-						<Image src={Al} style="height: min-content;" alt="logo empresa Al">
+						<Image src={newTemper} style="height: min-content;" alt="logo empresa new temper"/>
+						<Image src={al} style="height: min-content;" alt="logo empresa Al"/>
 						<Image src={makit} style="height: min-content; background-blend-mode: overlay;"
-							alt="logo empresa Makit">
+							alt="logo empresa Makit"/>
 					</div>
 				</div>
 	
@@ -269,5 +270,14 @@ const reviews = [
   opacity: 1;
   transition: all 0.9s ease-out;
 }
+.glass-effect {
+  background: rgba (130, 208, 246, 0.34);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 </style>
 
