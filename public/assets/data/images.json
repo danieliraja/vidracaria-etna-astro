@@ -26,13 +26,13 @@
   {
     "src": "assets/img/box/Box de canto (2).jpg",
     "dir": "box",
-    "name": "Box de canto (2).jpg",
+    "name": "box_de_canto.jpg",
     "type": "image/jpeg"
   },
   {
     "src": "assets/img/box/Box frontal - 3 peças.jpg",
     "dir": "box",
-    "name": "Box frontal - 3 peças.jpg",
+    "name": "box_frontal_3_peças.jpg",
     "type": "image/jpeg"
   },
   {
@@ -44,7 +44,7 @@
   {
     "src": "assets/img/box/Box open.jpg",
     "dir": "box",
-    "name": "Box open.jpg",
+    "name": "box_open.jpg",
     "type": "image/jpeg"
   },
   {

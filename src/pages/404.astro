@@ -1,18 +1,35 @@
 
 ---
 import Layout from "../layouts/Layout.astro"
+import astroConfig from "../../astro.config.mjs"
 ---
 
 <Layout title="Página não encontrada">
-  <div class="text-center p-5">
-    <h1 class="display-1">404</h1>
-    <p class="lead">Parece que você se perdeu...</p>
-    <p> A página que você está procurando não foi encontrada.</p>
-    <a href="/" class="btn btn-primary">Voltar à Página Inicial</a>
-  </div>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Página não encontrada</h1>
+          <p>Parece que você está procurando algo que não existe.</p>
+          <a href={astroConfig.base} class="btn btn-primary">Voltar para a página inicial</a>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style>
- 
+  body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
 </style>
