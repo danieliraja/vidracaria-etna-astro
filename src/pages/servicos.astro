@@ -1,5 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import images from "../../public/assets/data/images.json";
+import astroConfig from "../../astro.config.mjs";
+
+
+const servicos = images.filter((img) => img.dir === 'porta');
+
 ---
 
 <Layout title="Etna Vidros - Serviços">
@@ -10,6 +16,10 @@ import Layout from "../layouts/Layout.astro";
         <div class="container">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
+
+              {servicos.map((item) => (
+                <img src={astroConfig.base+'/'+item.src} class="card-img-top" alt={item.name} />
+              ))}
               <div class="card">
                 <svg
                   class="bd-placeholder-img card-img-top"
