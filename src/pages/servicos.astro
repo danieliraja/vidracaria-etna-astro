@@ -1,72 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import images from "../../public/assets/data/images.json";
 import astroConfig from "../../astro.config.mjs";
+import servicos from "../../public/assets/data/servicos.json";
 
-
-const servicos = images.filter((img) => img.dir === 'porta');
+let itemName : string | undefined = "bascula";
 
 ---
 
+
 <Layout title="Etna Vidros - Serviços">
   <main style="background-color: #f3f2f2;">
-    <div class="container px-4 py-5" id="custom-cards">
-      <h2 class="pb-2 border-bottom">Serviços</h2>
-      <div class="album py-5">
+    <div class="container px-4 py-5" id="custom-cards">      
+      <h2 class="pb-2 border-bottom">Serviços</h2>      
+      <div class="py-5">       
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-
-              {servicos.map((item) => (
-                <img src={astroConfig.base+'/'+item.src} class="card-img-top" alt={item.name} />
-              ))}
-              <div class="card">
-                <svg
-                  class="bd-placeholder-img card-img-top"
-                  width="100%"
-                  height="225"
-                  xmlns="http://www.w3.org/2000/svg"
-                  role="img"
-                  aria-label="Placeholder: Thumbnail"
-                  preserveAspectRatio="xMidYMid slice"
-                  focusable="false"
-                  ><title>Placeholder</title><rect
-                    width="100%"
-                    height="100%"
-                    fill="#55595c"></rect><text
-                    x="50%"
-                    y="50%"
-                    fill="#eceeef"
-                    dy=".3em">Thumbnail</text
-                  ></svg
-                >
-                <div class="card-body">
-                  <p class="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                  </p>
-                  <div
-                    class="d-flex justify-content-between align-items-center"
-                  >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary">View</button
-                      >
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary">Edit</button
-                      >
-                    </div>
-                    <small class="text-body-secondary">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="row d-flex justify-content-center align-items-center g-4" >
+            {
+              servicos.map((servico) => (
+              <div class="col">
+						<div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
+							style={`background-image: url(${astroConfig.base}/${ servico.imagem}); background-size: cover `}>
+							<div class="d-flex flex-column h-100 text-white p-5 pb-3 text-shadow-1">
+								<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{servico.produto}</h3>
+								<p>{servico.descricao}</p>
+								<ul class="d-flex list-unstyled mt-auto">
+									<li class="d-flex align-items-center me-3">
+										<i class="bi bi-palette-fill me-1"></i>
+										<small>Cores diversas</small>
+									</li>
+									<li class="d-flex align-items-center">
+										<i class="bi bi-rulers me-1"></i>
+										<small>8 milímetros</small>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+              ))
+            }      
+          
           </div>
         </div>
       </div>
     </div>
   </main>
 </Layout>
+
+
+<style>
+  .background-blend-custom {
+  background-color: #002a66;
+  background-blend-mode: overlay;
+  background-size: cover;
+  }
+</style>

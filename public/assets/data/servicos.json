@@ -1,0 +1,52 @@
+[
+  {
+    "produto": "Báscula",
+    "descricao": "Segurança e praticidade para o seu banheiro.",
+    "imagem": "assets/img/bascula/bascula-com-vidro-fixo.jpg"
+  },
+  {
+    "produto": "Box",
+    "descricao": "Design moderno para seu banheiro.",
+    "imagem": "assets/img/box/box-de-canto-vidro-incolor.jpg"
+  },
+  {
+    "produto": "Cortina",
+    "descricao": "Controle de luminosidade e privacidade com estilo.",
+    "imagem": "assets/img/misc/cortina-de-vidro.jpg"
+  },
+  {
+    "produto": "Cozinha",
+    "descricao": "Sofisticação e praticidade para sua cozinha.",
+    "imagem": "assets/img/cozinha/kit-pia-em-vidro-incolor-com-acabamento-preto.jpg"
+  },
+  {
+    "produto": "Divisória",
+    "descricao": "Ambientes mais organizados e com estilo.",
+    "imagem": "assets/img/divisoria/divisoria.jpg"
+  },
+  {
+    "produto": "Espelho",
+    "descricao": "Amplie e ilumine seus ambientes.",
+    "imagem": "assets/img/espelho/espelho-bisotado.jpg"
+  },
+  {
+    "produto": "Janela",
+    "descricao": "Segurança, conforto e beleza para sua casa.",
+    "imagem": "assets/img/janela/janela-de-2-folhas.jpg"
+  },
+  {
+    "produto": "Porta",
+    "descricao": "Segurança e elegância para sua entrada.",
+    "imagem": "assets/img/porta/portas-de-correr.jpeg"
+  },
+  {
+    "produto": "Seteira",
+    "descricao": "Ventilação e segurança para sua casa.",
+    "imagem": "assets/img/seteira/seteira.jpg"
+  },
+  {
+    "produto": "Terraço",
+    "descricao": "Segurança e sofisticação para seu terraço.",
+    "imagem": "assets/img/terraco/fechamento-terraco.jpg"
+  }
+]
