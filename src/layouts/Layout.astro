@@ -21,6 +21,15 @@ const { title } = Astro.props;
   	<link rel="canonical" href="https://www.etnavidros.com.br/pagina-inicial">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<style>
+			body {
+				--swup-overlay-theme-color: #002a66;
+				--swup-overlay-theme-duration: .6s;
+				--swup-overlay-theme-delay: .2s;
+				--swup-overlay-theme-scale: 1.2;
+				--swup-overlay-theme-skew: 5deg;
+			}
+		</style>
 	</head>
 	<body>
 		<Header/>

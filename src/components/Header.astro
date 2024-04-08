@@ -1,6 +1,7 @@
 ---
 import Image from "astro/components/Image.astro";
 import logo from "../../public/assets/img/misc/logo.png";
+import astroConfig from "../../astro.config.mjs";
 ---
 
 
@@ -17,26 +18,26 @@ import logo from "../../public/assets/img/misc/logo.png";
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body justify-content-end">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav d-flex justify-content-end align-items-center">
           <li class="nav-item d-md-none d-sm-block">
             <a class="navbar-brand" href="/vidracaria-etna-astro/"><Image class="img-fluid"
                 src={logo} alt="Logotipo Etna vidros" width={200} /></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="/vidracaria-etna-astro/">Pagina inicial</a>
+            <a class="nav-link  fw-medium" href={astroConfig.base}>Pagina inicial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="/vidracaria-etna-astro/sobre/">Sobre
+            <a class="nav-link fw-medium" href={astroConfig.base+"/sobre/"}>Sobre
               nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="/vidracaria-etna-astro/servicos/">Serviços</a>
+            <a class="nav-link fw-medium" href={astroConfig.base+"/servicos/"}>Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="/vidracaria-etna-astro/contato/">Contato</a>
+            <a class="nav-link fw-medium" href={astroConfig.base+"/contato/"}>Contato</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-primary fw-medium" target="_blank"
+            <a class="btn btn-outline-success btn-sm fw-medium" target="_blank"
               href="https://wa.me/552133610030?text=Gostaria%20de%20saber%2sobre%20o%20preço%20do%20apartamento"> <i
                 class="bi bi-whatsapp"></i> Solicitar orçamento</a>
           </li>

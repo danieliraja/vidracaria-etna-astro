@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import servicos from "../../../public/assets/data/servicos.json";
+
+export function getStaticPaths() {
+  return servicos.map((servico: any) => ({
+    params: { servico: servico.produto.toLocaleLowerCase() },
+  }));
+}
+
+const { servico } = Astro.params;
+---
+
+<Layout title={`Etna Vidros - ${servico}`}>
+  <main class="bg-light">
+    <div class="container px-4 py-5">
+      {servico}
+    </div>
+  </main>
+</Layout>

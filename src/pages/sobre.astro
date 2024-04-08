@@ -5,7 +5,7 @@ import CortinaDeVidro from "../../public/assets/img/misc/cortina-de-vidro.jpg";
 ---
 
 <Layout title="Sobre nós">
-<div style="background-color: #f3f2f2;">
+<main class="bg-light">
   <div class="container px-4 py-5" id="custom-cards">
     <h2 class="pb-2 border-bottom">Sobre nós</h2>
 
@@ -13,16 +13,16 @@ import CortinaDeVidro from "../../public/assets/img/misc/cortina-de-vidro.jpg";
       <div class="col-sm-12 col-md-6 p-2">
         <Image src={CortinaDeVidro} class="img-fluid rounded" alt="cortina de vidro de vidraçaria">
       </div>
-      <div class="col-sm-12 col-md-6">
+      <div class="col-sm-12 col-md-6 ps-5">
         <p>
-          Desde 1999, a Vidraçaria Etna se dedica a oferecer soluções completas em vidros e espelhos para o Rio de
+          Desde 1999, a Etna Vidros se dedica a oferecer soluções completas em vidros e espelhos para o Rio de
           Janeiro.
           Nossa missão é atender às suas necessidades com
           excelência, qualidade e um atendimento personalizado.</p>
 
         <em class="fw-bold">Mais do que produtos:</em>
 
-        <ul>
+        <ul class="list-unstyled custom-list">
           <li>Especialistas em vidros e espelhos: Oferecemos uma ampla gama de produtos, desde vidros simples até
             soluções sob medida para projetos residenciais e comerciais.</li>
           <li>Mão de obra qualificada: Nossa equipe experiente garante um serviço impecável, desde a escolha do
@@ -33,10 +33,10 @@ import CortinaDeVidro from "../../public/assets/img/misc/cortina-de-vidro.jpg";
             confiável para que você tenha tranquilidade total.</li>
         </ul>
 
-        <em class="fw-bold">Na Vidraçaria Etna, você encontra:</em>
+        <em class="fw-bold">Na Etna Vidros, você encontra:</em>
 
 
-        <ul>
+        <ul class="list-unstyled custom-list">
           <li>Vidros temperados e laminados: Segurança e resistência para áreas com maior risco de impacto.</li>
           <li>Espelhos sob medida: Decoração e amplitude para todos os ambientes.</li>
           <li>Box de banheiro: Design moderno e funcional para o seu banheiro.</li>
@@ -47,12 +47,12 @@ import CortinaDeVidro from "../../public/assets/img/misc/cortina-de-vidro.jpg";
 
         <em class="fw-bold">Somos referência em atendimento e qualidade:</em>
 
-        <ul>
+        <ul class="list-unstyled custom-list">
           <li>Clientes satisfeitos: Nossa reputação é construída na confiança de nossos clientes.</li>
           <li>Credibilidade: Mais de duas décadas de experiência no mercado.</li>
           <li>Rapidez: Agilidade na entrega e instalação dos serviços.</li>
           <li>Confiança: Compromisso com a qualidade e a satisfação do cliente.</li>
-          <li>Vidraçaria Etna: A solução completa para suas necessidades em vidros e espelhos.</li>
+          <li>Etna Vidros: A solução completa para suas necessidades em vidros e espelhos.</li>
         </ul>
       </div>
     </div>
@@ -60,3 +60,14 @@ import CortinaDeVidro from "../../public/assets/img/misc/cortina-de-vidro.jpg";
 </div>
 
 </Layout>
+
+
+<style>
+  .custom-list {
+    list-style-type: square ;
+    padding-left: 1.5rem;
+  }
+  .custom-list li::marker {
+  color: #02a4ea;
+}
+</style>

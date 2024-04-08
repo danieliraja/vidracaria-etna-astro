@@ -1,22 +1,27 @@
-
 ---
-import Layout from "../layouts/Layout.astro"
-import astroConfig from "../../astro.config.mjs"
+import astroConfig from "../../astro.config.mjs";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Página não encontrada">
-  <main>
+<Layout title="Etna Vidros - Página não encontrada">
+  <main class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Página não encontrada</h1>
-          <p>Parece que você está procurando algo que não existe.</p>
+          <h1 class="display-1 fw-bold 404">404</h1>
+          <h3>Página não encontrada</h3>
+          <p>Oops! Parece que o nosso vidro de busca não está funcionando muito bem... <br>
+            Estamos procurando entre os cacos para encontrar a página que você está procurando. <br>
+            Enquanto isso, <a class="text-primary text-decoration-none" href={astroConfig.base+"/servicos/"}>que tal dar uma olhada nas nossas incríveis janelas?</a> Elas são à prova de 404's, garantido! <br>
+             Ou você pode nos dar um toque, e vamos encontrar o que você precisa mais rápido que um raio de sol atravessando um vidro.</p>
           <a href={astroConfig.base} class="btn btn-primary">Voltar para a página inicial</a>
         </div>
       </div>
     </div>
   </main>
+ 
 </Layout>
+
 
 <style>
   body {

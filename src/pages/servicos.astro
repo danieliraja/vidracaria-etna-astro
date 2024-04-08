@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import astroConfig from "../../astro.config.mjs";
 import servicos from "../../public/assets/data/servicos.json";
+import Layout from "../layouts/Layout.astro";
 
 let itemName : string | undefined = "bascula";
 
@@ -9,7 +9,7 @@ let itemName : string | undefined = "bascula";
 
 
 <Layout title="Etna Vidros - Serviços">
-  <main style="background-color: #f3f2f2;">
+  <main class="bg-light">
     <div class="container px-4 py-5" id="custom-cards">      
       <h2 class="pb-2 border-bottom">Serviços</h2>      
       <div class="py-5">       
@@ -17,22 +17,13 @@ let itemName : string | undefined = "bascula";
           <div class="row d-flex justify-content-center align-items-center g-4" >
             {
               servicos.map((servico) => (
-              <div class="col">
-						<div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
-							style={`background-image: url(${astroConfig.base}/${ servico.imagem}); background-size: cover `}>
-							<div class="d-flex flex-column h-100 text-white p-5 pb-3 text-shadow-1">
-								<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{servico.produto}</h3>
-								<p>{servico.descricao}</p>
-								<ul class="d-flex list-unstyled mt-auto">
-									<li class="d-flex align-items-center me-3">
-										<i class="bi bi-palette-fill me-1"></i>
-										<small>Cores diversas</small>
-									</li>
-									<li class="d-flex align-items-center">
-										<i class="bi bi-rulers me-1"></i>
-										<small>8 milímetros</small>
-									</li>
-								</ul>
+              <div class="col-4 col">
+						<div class="card card-cover overflow-hidden rounded-4 shadow-lg background-blend-custom"
+							style={`background-image: url(${astroConfig.base}/${ servico.imagem}); background-size: cover; background-position: center; height: 350px; width: 350px max-height: 300px max-width: 300px`}>
+							<div class="d-flex flex-column h-100 text-white p-5 text-shadow-1">
+								<h3 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">{servico.produto}</h3>
+								<p class="card-text fs-6">{servico.descricao}</p>
+								<a class="btn btn-primary text-white fw-bold btn-sm mt-auto shadow d-flex align-items-center justify-content-center" href={astroConfig.base+"/servicos/"+servico.produto.toLocaleLowerCase()}>Saber mais<i class="bi bi-arrow-right ms-2"></i></a>
 							</div>
 						</div>
 					</div>
@@ -52,5 +43,13 @@ let itemName : string | undefined = "bascula";
   background-color: #002a66;
   background-blend-mode: overlay;
   background-size: cover;
+  transition: background-color 2.5s;
   }
+  .background-blend-custom:hover {
+  cursor: pointer;
+  background-color: #131647;
+  transition: background-color 0.5s;
+  }
+
+
 </style>
