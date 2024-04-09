@@ -23,7 +23,7 @@ let itemName : string | undefined = "bascula";
 							<div class="d-flex flex-column h-100 text-white p-5 text-shadow-1">
 								<h3 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">{servico.produto}</h3>
 								<p class="card-text fs-6">{servico.descricao}</p>
-								<a class="btn btn-primary text-white fw-bold btn-sm mt-auto shadow d-flex align-items-center justify-content-center" href={astroConfig.base+"/servicos/"+servico.produto.toLocaleLowerCase()}>Saber mais<i class="bi bi-arrow-right ms-2"></i></a>
+								<a class="btn btn-primary text-white fw-bold btn-sm mt-auto shadow d-flex align-items-center justify-content-center" href={astroConfig.base+"/servicos/"+servico.rota}>Saber mais<i class="bi bi-arrow-right ms-2"></i></a>
 							</div>
 						</div>
 					</div>

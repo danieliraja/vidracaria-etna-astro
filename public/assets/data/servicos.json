@@ -1,51 +1,62 @@
 [
   {
     "produto": "Báscula",
+    "rota": "bascula",
     "descricao": "Segurança e praticidade para o seu banheiro.",
-    "imagem": "assets/img/bascula/bascula-com-vidro-fixo.jpg"
+    "imagem": "assets/img/bascula/bascula-com-vidro-fixo.jpg",
+    "content": "Painéis de vidro disponíveis em três cores: transparente, verde e fumê, com espessura de 8 mm e opções de acabamento em branco ou preto. As características variam de acordo com o modelo, incluindo detalhes como filme jateado e parte inferior fixa."
   },
   {
     "produto": "Box",
+    "rota": "box",
     "descricao": "Design moderno para seu banheiro.",
     "imagem": "assets/img/box/box-de-canto-vidro-incolor.jpg"
   },
   {
-    "produto": "Cortina",
+    "produto": "Cortina de vidro",
+    "rota": "cortina",
     "descricao": "Controle de luminosidade e privacidade com estilo.",
     "imagem": "assets/img/misc/cortina-de-vidro.jpg"
   },
   {
     "produto": "Cozinha",
+    "rota": "cozinha",
     "descricao": "Sofisticação e praticidade para sua cozinha.",
     "imagem": "assets/img/cozinha/kit-pia-em-vidro-incolor-com-acabamento-preto.jpg"
   },
   {
     "produto": "Divisória",
+    "rota": "divisoria",
     "descricao": "Ambientes mais organizados e com estilo.",
     "imagem": "assets/img/divisoria/divisoria.jpg"
   },
   {
     "produto": "Espelho",
+    "rota": "espelho",
     "descricao": "Amplie e ilumine seus ambientes.",
     "imagem": "assets/img/espelho/espelho-bisotado.jpg"
   },
   {
     "produto": "Janela",
+    "rota": "janela",
     "descricao": "Segurança, conforto e beleza para sua casa.",
     "imagem": "assets/img/janela/janela-de-2-folhas.jpg"
   },
   {
     "produto": "Porta",
+    "rota": "porta",
     "descricao": "Segurança e elegância para sua entrada.",
     "imagem": "assets/img/porta/portas-de-correr.jpeg"
   },
   {
     "produto": "Seteira",
+    "rota": "seteira",
     "descricao": "Ventilação e segurança para sua casa.",
     "imagem": "assets/img/seteira/seteira.jpg"
   },
   {
     "produto": "Terraço",
+    "rota": "terraco",
     "descricao": "Segurança e sofisticação para seu terraço.",
     "imagem": "assets/img/terraco/fechamento-terraco.jpg"
   }

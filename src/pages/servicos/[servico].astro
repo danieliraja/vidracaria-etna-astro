@@ -1,20 +1,54 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import servicos from "../../../public/assets/data/servicos.json";
+import images from "../../../public/assets/data/images.json";
+import astroConfig from "../../../astro.config.mjs";
+import { Carousel } from 'astro-bootstrap';
+import type { CarouselSlideType } from 'astro-bootstrap';
 
 export function getStaticPaths() {
   return servicos.map((servico: any) => ({
-    params: { servico: servico.produto.toLocaleLowerCase() },
+    params: { servico: servico.rota },
   }));
 }
 
 const { servico } = Astro.params;
+const data = servicos.find((s: any) => s.rota === servico);
+const slides: CarouselSlideType[] = images.filter((img: any) => img.dir === servico).map(image => ({
+  img: astroConfig.base +'/'+ image.src, alt: image.name, active: true
+}));
+const id = 'carouselExampleBasic';
 ---
 
 <Layout title={`Etna Vidros - ${servico}`}>
   <main class="bg-light">
     <div class="container px-4 py-5">
-      {servico}
+      <h2 class="pb-2 border-bottom">{data?.produto}</h2>      
+      <div class="row">     
+      <div class="col-6">        
+        <Carousel {id} fade>
+          <Carousel.Indicators {id} {slides} />
+          <Carousel.Inner>
+            {
+              slides.map((slide) => (
+                <Carousel.Item active={slide.active}>
+                  <img
+                    src={slide.img}
+                    class="d-block w-100 img-fluid"
+                    alt={slide.alt}
+                  />
+                </Carousel.Item>
+              ))
+            }
+          </Carousel.Inner>
+          <Carousel.Controls id={id} />
+        </Carousel> 
+      </div>
+      <div class="col-6">
+        {JSON.stringify(slides)}
+      {JSON.stringify(data)}
+      </div>
+    </div> 
     </div>
   </main>
 </Layout>
