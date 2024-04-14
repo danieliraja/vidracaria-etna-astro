@@ -4,13 +4,14 @@
     "rota": "bascula",
     "descricao": "Segurança e praticidade para o seu banheiro.",
     "imagem": "assets/img/bascula/bascula-com-vidro-fixo.jpg",
-    "content": "Painéis de vidro disponíveis em três cores: transparente, verde e fumê, com espessura de 8 mm e opções de acabamento em branco ou preto. As características variam de acordo com o modelo, incluindo detalhes como filme jateado e parte inferior fixa."
+    "htmlContent": "<div class=\"model mt-5\"><h4>Descrição detalhada</h4><p>Cada báscula é cuidadosamente projetada para oferecer funcionalidade e estilo. O vidro incolor proporciona uma sensação de leveza e amplitude ao ambiente, enquanto o acabamento em branco ou preto confere um toque de contemporaneidade.</p></div><div class=\"model mt-5\"><h4>Variedade de cores</h4><p>Além do vidro incolor, oferecemos opções em verde e fumê, permitindo que você escolha a tonalidade que melhor se harmonize com a sua decoração.</p></div><div class=\"model mt-5\"><h4>Versatilidade no acabamento</h4><p>O acabamento em branco ou preto permite uma integração perfeita com diferentes estilos de banheiro, desde os mais minimalistas até os mais luxuosos.</p></div><div class=\"model mt-5\"><h4>Modelos disponíveis</h4><ul><li>Báscula Padrão: Vidro incolor com acabamento branco ou preto.</li><li>Báscula em vidro fumê: Vidro fumê com acabamento preto.</li><li>Báscula com Vidro Fixo na Parte de Baixo: Vidro incolor com película jateada e acabamento branco.</li></ul></div><div class=\"text-center mt-5\"><p>Escolha a Sua Báscula Ideal e Transforme Seu Banheiro em um Espaço de Puro Requinte.</p></div>"
   },
   {
     "produto": "Box",
     "rota": "box",
     "descricao": "Design moderno para seu banheiro.",
-    "imagem": "assets/img/box/box-de-canto-vidro-incolor.jpg"
+    "imagem": "assets/img/box/box-de-canto-vidro-incolor.jpg",
+    "htmlContent": "<div class=\"model mt-5\"><h4>Descrição detalhada</h4><p>Cada báscula é cuidadosamente projetada para oferecer funcionalidade e estilo. O vidro incolor proporciona uma sensação de leveza e amplitude ao ambiente, enquanto o acabamento em branco ou preto confere um toque de contemporaneidade.</p></div><div class=\"model mt-5\"><h4>Variedade de cores</h4><p>Além do vidro incolor, oferecemos opções em verde e fumê, permitindo que você escolha a tonalidade que melhor se harmonize com a sua decoração.</p></div><div class=\"model mt-5\"><h4>Versatilidade no acabamento</h4><p>O acabamento em branco ou preto permite uma integração perfeita com diferentes estilos de banheiro, desde os mais minimalistas até os mais luxuosos.</p></div><div class=\"model mt-5\"><h4>Modelos disponíveis</h4><ul><li>Báscula Padrão: Vidro incolor com acabamento branco ou preto.</li><li>Báscula em vidro fumê: Vidro fumê com acabamento preto.</li><li>Báscula com Vidro Fixo na Parte de Baixo: Vidro incolor com película jateada e acabamento branco.</li></ul></div><div class=\"text-center mt-5\"><p>Escolha a Sua Báscula Ideal e Transforme Seu Banheiro em um Espaço de Puro Requinte.</p></div>"
   },
   {
     "produto": "Cortina de vidro",

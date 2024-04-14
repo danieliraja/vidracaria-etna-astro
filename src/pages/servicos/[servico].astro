@@ -1,10 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import servicos from "../../../public/assets/data/servicos.json";
-import images from "../../../public/assets/data/images.json";
 import astroConfig from "../../../astro.config.mjs";
-import { Carousel } from 'astro-bootstrap';
-import type { CarouselSlideType } from 'astro-bootstrap';
+import images from "../../../public/assets/data/images.json";
+import servicos from "../../../public/assets/data/servicos.json";
+import Layout from "../../layouts/Layout.astro";
 
 export function getStaticPaths() {
   return servicos.map((servico: any) => ({
@@ -14,41 +12,85 @@ export function getStaticPaths() {
 
 const { servico } = Astro.params;
 const data = servicos.find((s: any) => s.rota === servico);
-const slides: CarouselSlideType[] = images.filter((img: any) => img.dir === servico).map(image => ({
-  img: astroConfig.base +'/'+ image.src, alt: image.name, active: true
-}));
-const id = 'carouselExampleBasic';
+const imageList = images.filter((i: any) => i.dir === servico);
 ---
 
 <Layout title={`Etna Vidros - ${servico}`}>
   <main class="bg-light">
     <div class="container px-4 py-5">
-      <h2 class="pb-2 border-bottom">{data?.produto}</h2>      
-      <div class="row">     
-      <div class="col-6">        
-        <Carousel {id} fade>
-          <Carousel.Indicators {id} {slides} />
-          <Carousel.Inner>
+      <h2 class="pb-2 border-bottom">{data?.produto}</h2>
+      <div class="row d-flex justify-content-center align-items-stretch g-4">
+        <div
+          class="pswp-gallery d-flex col-md-6 col-sm-12 mt-5"
+          id="my-gallery"
+        >
+          <ul class="wrapper list-unstyled">
             {
-              slides.map((slide) => (
-                <Carousel.Item active={slide.active}>
-                  <img
-                    src={slide.img}
-                    class="d-block w-100 img-fluid"
-                    alt={slide.alt}
+              imageList.map((image: any) => (
+                <li>
+                  <a
+                    href={astroConfig.base + "/public/assets/" + image.src}
+                    class="image"
+                    style={
+                      "background-image: url('" +
+                      astroConfig.base +
+                      "/public/assets/" +
+                      image.src +
+                      "'); width: 100%; height: 100%; min-height: 300px; object-fit: cover;"
+                    }
+                    data-lightbox={image.name}
+                    data-title={image.name}
+                    target="_blank"
                   />
-                </Carousel.Item>
+                </li>
               ))
             }
-          </Carousel.Inner>
-          <Carousel.Controls id={id} />
-        </Carousel> 
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p set:html={data?.htmlContent} />
+        </div>
       </div>
-      <div class="col-6">
-        {JSON.stringify(slides)}
-      {JSON.stringify(data)}
-      </div>
-    </div> 
-    </div>
+    </div>    
+    
   </main>
 </Layout>
+
+<style>
+  a.image {
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    flex-grow: 1;
+    gap: 10px;
+    grid-auto-flow: dense;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .wrapper::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  .wrapper::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  .wrapper::-webkit-scrollbar-thumb {
+    background-color: #131745;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  .wrapper li.landscape {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    grid-column-end: span 2;
+  }
+</style>
