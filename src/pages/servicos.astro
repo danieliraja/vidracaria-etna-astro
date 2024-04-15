@@ -3,33 +3,39 @@ import astroConfig from "../../astro.config.mjs";
 import servicos from "../../public/assets/data/servicos.json";
 import Layout from "../layouts/Layout.astro";
 
-let itemName : string | undefined = "bascula";
-
+let itemName: string | undefined = "bascula";
 ---
-
 
 <Layout title="Etna Vidros - Serviços">
   <main class="bg-light">
-    <div class="container px-4 py-5" id="custom-cards">      
-      <h2 class="pb-2 border-bottom">Serviços</h2>      
-      <div class="py-5">       
+    <div class="container px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom">Serviços</h2>
+      <div class="py-5">
         <div class="container">
-          <div class="row d-flex justify-content-center align-items-center g-4" >
+          <div class="row d-flex justify-content-center align-items-center g-4">
             {
               servicos.map((servico) => (
-              <div class="col-4 col">
-						<div class="card card-cover overflow-hidden rounded-4 shadow-lg background-blend-custom"
-							style={`background-image: url(${astroConfig.base}/${ servico.imagem}); background-size: cover; background-position: center; height: 350px; width: 350px max-height: 300px max-width: 300px`}>
-							<div class="d-flex flex-column h-100 text-white p-5 text-shadow-1">
-								<h3 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">{servico.produto}</h3>
-								<p class="card-text fs-6">{servico.descricao}</p>
-								<a class="btn btn-primary text-white fw-bold btn-sm mt-auto shadow d-flex align-items-center justify-content-center" href={astroConfig.base+"/servicos/"+servico.rota}>Saber mais<i class="bi bi-arrow-right ms-2"></i></a>
-							</div>
-						</div>
-					</div>
+                <div class="col-sm-12 col-md-3">
+                  <div
+                    class="card card-cover overflow-hidden background-blend-custom"
+                    style={`background-image: url(${astroConfig.base}/${servico.imagem}); background-size: cover; background-position: center; height: 350px; width: 350px max-height: 300px max-width: 300px`}
+                  >
+                    <div class="d-flex flex-column h-100 text-white p-5 text-shadow-1">
+                      <h3 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">
+                        {servico.produto}
+                      </h3>
+                      <p class="card-text fs-6">{servico.descricao}</p>
+                    </div>
+                    <a
+                      class="btn btn-primary text-white fw-bold mt-auto rounded-top-0 shadow glass-button"
+                      href={astroConfig.base + "/servicos/" + servico.rota}
+                    >
+                      Saiba mais
+                    </a>
+                  </div>
+                </div>
               ))
-            }      
-          
+            }
           </div>
         </div>
       </div>
@@ -37,19 +43,18 @@ let itemName : string | undefined = "bascula";
   </main>
 </Layout>
 
-
 <style>
   .background-blend-custom {
-  background-color: #002a66;
-  background-blend-mode: overlay;
-  background-size: cover;
-  transition: background-color 2.5s;
+    background-color: #002a66;
+    border: none;
+    background-blend-mode: overlay;
+    background-size: cover;
+    transition: background-color 2.5s;
   }
+
   .background-blend-custom:hover {
-  cursor: pointer;
-  background-color: #131647;
-  transition: background-color 0.5s;
+    cursor: pointer;
+    background-color: #131647;
+    transition: background-color 0.5s;
   }
-
-
 </style>

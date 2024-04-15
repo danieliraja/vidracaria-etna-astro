@@ -5,36 +5,36 @@ import astroConfig from "../../astro.config.mjs";
 ---
 
 
-<nav style="background-color: #fff" class="navbar navbar-expand-lg sticky-top navbar-light bg-gradient py-3">
+<nav style="background-color: #fff" class="navbar navbar-expand-lg sticky-top navbar-light py-3">
   <div class="container d-flex justify-content-between">
-    <a class="navbar-brand" href="/vidracaria-etna-astro/">
+    <a class="navbar-brand" href={astroConfig.base}>
       <Image class="img-fluid" src={logo} width={200} alt="Etna vidros" /></a>
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-list" style="font-size: 3rem"></i>
     </button>
-    <div class="offcanvas offcanvas-end w-100 border-primary border-5 d-flex justify-content-end" id="navbarNav">
+    <div class="offcanvas offcanvas-end w-75 bg-etna d-flex justify-content-start align-items-end" id="navbarNav">
       <div class="offcanvas-header">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body justify-content-end">
+      <div class="offcanvas-body justify-content-start align-items-center">
         <ul class="navbar-nav d-flex justify-content-end align-items-center">
           <li class="nav-item d-md-none d-sm-block">
-            <a class="navbar-brand" href="/vidracaria-etna-astro/"><Image class="img-fluid"
+            <a class="navbar-brand" href="/vidracaria-etna-astro/" data-bs-dismiss="offcanvas"><Image class="img-fluid"
                 src={logo} alt="Logotipo Etna vidros" width={200} /></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  fw-medium" href={astroConfig.base}>Pagina inicial</a>
+            <a class="nav-link  fw-medium" href={astroConfig.base} data-bs-dismiss="offcanvas">Pagina inicial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href={astroConfig.base+"/sobre/"}>Sobre
+            <a class="nav-link fw-medium" href={astroConfig.base+"/sobre/"} data-bs-dismiss="offcanvas">Sobre
               nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href={astroConfig.base+"/servicos/"}>Serviços</a>
+            <a class="nav-link fw-medium" href={astroConfig.base+"/servicos/"} data-bs-dismiss="offcanvas">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href={astroConfig.base+"/contato/"}>Contato</a>
+            <a class="nav-link fw-medium" href={astroConfig.base+"/contato/"} data-bs-dismiss="offcanvas">Contato</a>
           </li>
           <li class="nav-item">
             <a class="btn btn-outline-success btn-sm fw-medium" target="_blank"
@@ -46,3 +46,4 @@ import astroConfig from "../../astro.config.mjs";
     </div>
   </div>
 </nav>
+

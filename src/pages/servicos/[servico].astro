@@ -21,7 +21,7 @@ const imageList = images.filter((i: any) => i.dir === servico);
       <h2 class="pb-2 border-bottom">{data?.produto}</h2>
       <div class="row d-flex justify-content-center align-items-stretch g-4">
         <div
-          class="pswp-gallery d-flex col-md-6 col-sm-12 mt-5"
+          class="d-flex col-md-6 col-sm-12 mt-5"
           id="my-gallery"
         >
           <ul class="wrapper list-unstyled">
@@ -43,8 +43,8 @@ const imageList = images.filter((i: any) => i.dir === servico);
             }
           </ul>
         </div>
-        <div class="col-md-6 col-sm-12">
-          <p set:html={data?.htmlContent} />
+        <div class="col-md-6 col-sm-12 bg-light">
+          <p class="pt-0 w-75" set:html={data?.htmlContent} />
         </div>
       </div>
     </div>
@@ -64,8 +64,6 @@ const imageList = images.filter((i: any) => i.dir === servico);
     flex-grow: 1;
     gap: 10px;
     grid-auto-flow: dense;
-    max-height: 70vh;
-    overflow-y: auto;
   }
 
   .wrapper::-webkit-scrollbar {
