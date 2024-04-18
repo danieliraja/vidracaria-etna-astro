@@ -3,7 +3,7 @@ import swup from "@swup/astro";
 // https://astro.build/config
 export default defineConfig({
   site: "www.etnavidros.com.br",
-  base: "/vidracaria-etna-astro",
+  base: "/",
   integrations: [
     swup({
       theme: "slide",
