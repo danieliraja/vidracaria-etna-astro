@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import swup from "@swup/astro";
 // https://astro.build/config
 export default defineConfig({
-  site: "https://danieliraja.github.io",
+  site: "www.etnavidros.com.br",
   base: "/vidracaria-etna-astro",
   integrations: [
     swup({
