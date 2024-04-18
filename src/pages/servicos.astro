@@ -2,8 +2,6 @@
 import astroConfig from "../../astro.config.mjs";
 import servicos from "../../public/assets/data/servicos.json";
 import Layout from "../layouts/Layout.astro";
-
-let itemName: string | undefined = "bascula";
 ---
 
 <Layout title="Etna Vidros - Serviços">
@@ -18,7 +16,7 @@ let itemName: string | undefined = "bascula";
                 <div class="col-sm-12 col-md-3">
                   <div
                     class="card card-cover overflow-hidden background-blend-custom"
-                    style={`background-image: url(${astroConfig.base}/${servico.imagem}); background-size: cover; background-position: center; height: 350px; width: 350px max-height: 300px max-width: 300px`}
+                    style={`background-image: url(${astroConfig.site}/${servico.imagem}); background-size: cover; background-position: center; height: 350px; width: 350px max-height: 300px max-width: 300px`}
                   >
                     <div class="d-flex flex-column h-100 text-white p-5 text-shadow-1">
                       <h3 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">
@@ -28,7 +26,7 @@ let itemName: string | undefined = "bascula";
                     </div>
                     <a
                       class="btn btn-primary text-white fw-bold mt-auto rounded-top-0 shadow glass-button"
-                      href={astroConfig.base + "/servicos/" + servico.rota}
+                      href={astroConfig.site + "/servicos/" + servico.rota}
                     >
                       Saiba mais
                     </a>
