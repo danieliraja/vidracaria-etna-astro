@@ -203,39 +203,6 @@
     }
   },
   {
-    "src": "img/box/box-frontal-pecas-2.jpg",
-    "dir": "box",
-    "name": "Box frontal pecas 2",
-    "type": "jpg",
-    "dimensions": {
-      "height": 1280,
-      "width": 960,
-      "type": "jpg"
-    }
-  },
-  {
-    "src": "img/box/box-frontal-pecas.jpg",
-    "dir": "box",
-    "name": "Box frontal pecas",
-    "type": "jpg",
-    "dimensions": {
-      "height": 816,
-      "width": 612,
-      "type": "jpg"
-    }
-  },
-  {
-    "src": "img/box/box-open-2.jpg",
-    "dir": "box",
-    "name": "Box open 2",
-    "type": "jpg",
-    "dimensions": {
-      "height": 1280,
-      "width": 960,
-      "type": "jpg"
-    }
-  },
-  {
     "src": "img/box/box-open-vidro-verde.jpg",
     "dir": "box",
     "name": "Box open vidro verde",
