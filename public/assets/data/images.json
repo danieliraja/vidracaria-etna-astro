@@ -143,17 +143,7 @@
       "type": "jpg"
     }
   },
-  {
-    "src": "img/box/box-de-canto.jpg",
-    "dir": "box",
-    "name": "Box de canto",
-    "type": "jpg",
-    "dimensions": {
-      "height": 1280,
-      "width": 640,
-      "type": "jpg"
-    }
-  },
+ 
   {
     "src": "img/box/box-frontal-em-vidro-incolor-com-acabamento-branco-duas-folhas.jpg",
     "dir": "box",
@@ -163,6 +153,18 @@
       "height": 1061,
       "orientation": 1,
       "width": 936,
+      "type": "jpg"
+    }
+  },
+  {
+    "src": "img/box/box-frontal-em-vidro-transparente.jpg",
+    "dir": "box",
+    "name": "Box frontal em vidro incolor fixo na parede",
+    "type": "jpg",
+    "dimensions": {
+      "height": 1599,
+      "orientation": 1,
+      "width": 899,
       "type": "jpg"
     }
   },

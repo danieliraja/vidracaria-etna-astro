@@ -4,46 +4,90 @@ import logo from "../../public/assets/img/misc/logo.png";
 import astroConfig from "../../astro.config.mjs";
 ---
 
-
-<nav style="background-color: #fff" class="navbar navbar-expand-lg sticky-top navbar-light py-3">
+<nav
+  style="background-color: #fff"
+  class="navbar navbar-expand-lg sticky-top navbar-light py-3"
+>
   <div class="container d-flex justify-content-between">
     <a class="navbar-brand" href={astroConfig.site}>
-      <Image class="img-fluid" src={logo} width={200} alt="Etna vidros" /></a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <Image class="img-fluid" src={logo} width={200} alt="Etna vidros" /></a
+    >
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <i class="bi bi-list" style="font-size: 3rem"></i>
     </button>
-    <div class="offcanvas offcanvas-end w-75 bg-etna d-flex justify-content-start align-items-end" id="navbarNav">
+    <div
+      class="offcanvas offcanvas-end w-75 bg-etna d-flex justify-content-start align-items-end"
+      id="navbarNav"
+    >
       <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
       </div>
       <div class="offcanvas-body justify-content-start align-items-center">
         <ul class="navbar-nav d-flex justify-content-end align-items-center">
           <li class="nav-item d-md-none d-sm-block">
-            <a class="navbar-brand" href={astroConfig.site} data-bs-dismiss="offcanvas"><Image class="img-fluid"
-                src={logo} alt="Logotipo Etna vidros" width={200} /></a>
+            <a
+              class="navbar-brand"
+              href={astroConfig.site}
+              data-bs-dismiss="offcanvas"
+              ><Image
+                class="img-fluid"
+                src={logo}
+                alt="Logotipo Etna vidros"
+                width={200}
+              /></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link  fw-medium" href={astroConfig.site} data-bs-dismiss="offcanvas">Pagina inicial</a>
+            <a
+              class="nav-link fw-medium"
+              href={astroConfig.site}
+              data-bs-dismiss="offcanvas">Pagina inicial</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href={astroConfig.site+"/sobre/"} data-bs-dismiss="offcanvas">Sobre
-              nós</a>
+            <a
+              class="nav-link fw-medium"
+              href={astroConfig.site + "/sobre/"}
+              data-bs-dismiss="offcanvas">Sobre nós</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href={astroConfig.site+"/servicos/"} data-bs-dismiss="offcanvas">Serviços</a>
+            <a
+              class="nav-link fw-medium"
+              href={astroConfig.site + "/servicos/"}
+              data-bs-dismiss="offcanvas">Serviços</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href={astroConfig.site+"/contato/"} data-bs-dismiss="offcanvas">Contato</a>
+            <a
+              class="nav-link fw-medium"
+              href={astroConfig.site + "/contato/"}
+              data-bs-dismiss="offcanvas">Contato</a
+            >
           </li>
-          <li class="nav-item">
-            <a class="btn btn-outline-success btn-sm fw-medium" target="_blank"
-              href="https://wa.me/552133610030?text=Gostaria%20de%20saber%2sobre%20o%20preço%20do%20apartamento"> <i
-                class="bi bi-whatsapp"></i> Solicitar orçamento</a>
+          <li class="nav-item ">
+            <a
+              class="btn btn-outline-success btn-sm fw-medium"
+              target="_blank"
+              href="https://wa.me/552133610030?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento"
+            >
+              <i class="bi bi-whatsapp"></i> Solicitar orçamento</a
+            >
           </li>
         </ul>
       </div>
     </div>
   </div>
 </nav>
-

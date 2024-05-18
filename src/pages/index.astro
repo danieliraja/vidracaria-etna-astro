@@ -1,284 +1,328 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import newTemper from '../../public/assets/img/marcas/new-temper.png';
-import al from '../../public/assets/img/marcas/al.png';
-import makit from '../../public/assets/img/marcas/makit.png';
-import Image from 'astro/components/Image.astro';
+import Layout from "../layouts/Layout.astro";
+import newTemper from "../../public/assets/img/marcas/new-temper.png";
+import al from "../../public/assets/img/marcas/al.png";
+import makit from "../../public/assets/img/marcas/makit.png";
+import Image from "astro/components/Image.astro";
 
 const reviews = [
-    {
-      id: 1,
-      name: 'Kelly Souza',
-      rate: 5,
-      image:
-        'https://lh3.googleusercontent.com/a/ACg8ocIe2eCV0NK8fpKfheV6OwXmnZI17fmiYwmuZjvG_Jjy=w36-h36-p-rp-mo-br100',
-      comment:
-        'Ótimo atendimento. Todas as vezes que precisei fui muito bem atendida com rapidez e eficiência.',
-    },
-    {
-      id: 2,
-      name: 'Marcus Mengão',
-      rate: 5,
-      image:
-        'https://lh3.googleusercontent.com/a-/ALV-UjUD25LZS4Fk0CJCuGgQ8umvLLuZ5VOJulChYD3QQ7QkNjM=w60-h60-p-rp-mo-br100',
-      comment:
-        'Atendimento impecável do Bruno, os técnicos profissionais ao extremo! Me assessoraram corretamente. Forma de pagamento excelente. Preço justo. Farei novos serviços com a empresa.',
-    },
-    {
-      id: 3,
-      name: 'Taynah Dias',
-      rate: 5,
-      image:
-        'https://lh3.googleusercontent.com/a-/ALV-UjWb2O-eYD_3bjStgdnXcckqYgGt06BVmF0f6L8XEdGcgX0=w36-h36-p-rp-mo-br100',
-      comment:
-        'Empresa MUITO BOAAA! chegou no horário, trabalho ficou perfeito e do jeito que eu queria! Já vou fazer no outro banheiro com eles tbm!!',
-    },
-    {
-      id: 4,
-      name: 'Roberto Rocha',
-      rate: 5,
-      image:
-        'https://lh3.googleusercontent.com/a/ACg8ocJ1MAEnV03o7m8RbRUdPURKOCw_nrF9IgcQb77yLERy=w36-h36-p-rp-mo-br100',
-      comment:
-        'Atendimento impecável! Prazo atendido com precisão, preços competitivos. Certeza de indicação',
-    },
-  ];
+  {
+    id: 1,
+    name: "Kelly Souza",
+    rate: 5,
+    image:
+      "https://lh3.googleusercontent.com/a/ACg8ocIe2eCV0NK8fpKfheV6OwXmnZI17fmiYwmuZjvG_Jjy=w36-h36-p-rp-mo-br100",
+    comment:
+      "Ótimo atendimento. Todas as vezes que precisei fui muito bem atendida com rapidez e eficiência.",
+  },
+  {
+    id: 2,
+    name: "Marcus Mengão",
+    rate: 5,
+    image:
+      "https://lh3.googleusercontent.com/a-/ALV-UjUD25LZS4Fk0CJCuGgQ8umvLLuZ5VOJulChYD3QQ7QkNjM=w60-h60-p-rp-mo-br100",
+    comment:
+      "Atendimento impecável do Bruno, os técnicos profissionais ao extremo! Me assessoraram corretamente. Forma de pagamento excelente. Preço justo. Farei novos serviços com a empresa.",
+  },
+  {
+    id: 3,
+    name: "Taynah Dias",
+    rate: 5,
+    image:
+      "https://lh3.googleusercontent.com/a-/ALV-UjWb2O-eYD_3bjStgdnXcckqYgGt06BVmF0f6L8XEdGcgX0=w36-h36-p-rp-mo-br100",
+    comment:
+      "Empresa MUITO BOAAA! chegou no horário, trabalho ficou perfeito e do jeito que eu queria! Já vou fazer no outro banheiro com eles tbm!!",
+  },
+  {
+    id: 4,
+    name: "Roberto Rocha",
+    rate: 5,
+    image:
+      "https://lh3.googleusercontent.com/a/ACg8ocJ1MAEnV03o7m8RbRUdPURKOCw_nrF9IgcQb77yLERy=w36-h36-p-rp-mo-br100",
+    comment:
+      "Atendimento impecável! Prazo atendido com precisão, preços competitivos. Certeza de indicação",
+  },
+];
 ---
 
 <Layout title="Etna vidros - Atendemos em todo o Rio de Janeiro">
+  <main class="transition-fade">
+    <div class="bg-custom text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <div class="glass-effect p-5 col-sm-12 col-md-6 mx-auto text-start">
+          <h1
+            class="display-4 fw-bold text-start"
+            style="color: #fefefe; text-shadow:  1px 2px #05a4ea, 1px 3px #9cd9eb"
+          >
+            Mais que vidros, soluções completas para sua casa e negócio.
+          </h1>
+          <hr class="border border-dark border-3 my-4" />
+          <a
+            class="btn btn-primary btn-lg fw-bold w-100"
+            href="https://wa.me/552133610030"
+            target="_blank"
+            ><i class="bi bi-whatsapp me-1"></i>
+            Solicitar orçamento</a
+          >
+        </div>
+      </div>
+    </div>
 
-	<main class="transition-fade">
-		<div class="bg-custom text-secondary px-4 py-5 text-center">
-			<div class="py-5 ">
-				<div class="glass-effect p-5 col-sm-12 col-md-6 mx-auto text-start">
-					<h1 class="display-4 fw-bold text-start "
-						style="color: #fefefe; text-shadow:  1px 2px #05a4ea, 1px 3px #9cd9eb">
-						Mais que
-						vidros, soluções completas para sua
-						casa e
-						negócio.</h1>
-					<hr class="border border-dark border-3 my-4">
-					<a  class="btn btn-primary btn-lg fw-bold w-100" href="https://wa.me/552133610030" target="_blank" ><i class="bi bi-whatsapp me-1"></i>
-						Solicitar
-						orçamento</a>
-				</div>
-			</div>
-		</div>
-	
-		<div class="container px-4 py-5" id="icon-grid">
-			<h2 class="pb-2 border-bottom"> Vantagens dos nossos serviços</h2>
-			<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-				<div class="col d-flex align-items-start">
-					<div
-						class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-						<i class="bi bi-shield-fill-check "></i>
-					</div>
-					<div>
-						<h3 class="fs-3 text-body-emphasis">Empresa confiável</h3>
-						<ul>
-							<li>Em dia com todos os órgãos fiscalizadores.</li>
-							<li>Preço competitivo.</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col d-flex align-items-start">
-					<div
-						class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-						<i class="bi bi-gem"></i>
-					</div>
-					<div>
-						<h3 class="fs-3 text-body-emphasis">Qualidade garantida</h3>
-						<ul>
-							<li>Supervisão periódica dos funcionários, com foco na satisfação do cliente.</li>
-							<li> Equipamentos adequados para cada tipo de serviço.</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col d-flex align-items-start">
-					<div
-						class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-						<i class="bi bi-award"></i>
-					</div>
-					<div>
-						<h3 class="fs-3 text-body-emphasis">Profissionais experientes</h3>
-						<ul>
-							<li>Processo rigoroso de seleção de profissionais.</li>
-							<li>Avaliações e treinamentos regulares.</li>
-							<li>Uniformizados e com boa aparência.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	
-	
-		<div class="bg-light">
-			<div class="container px-4 py-5" id="custom-cards">
-				<h2 class="pb-2 border-bottom">Nossos serviços</h2>
-	
-				<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-					<div class="col">
-						<div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
-							style="background-image: url('/assets/img/box/box-frontal-em-vidro-incolor.jpg');">
-							<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-								<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold rounded-end-3 pb-2 ps-2">
-									Boxes
-									Frontais</h3>
-								<p>Temos os melhores boxes frontal e de canto para sua residencia</p>
-								<ul class="d-flex list-unstyled mt-auto">
-									<li class="d-flex align-items-center me-3">
-										<i class="bi bi-palette-fill me-1"></i>
-										<small>Cores diversas</small>
-									</li>
-									<li class="d-flex align-items-center">
-										<i class="bi bi-rulers me-1"></i>
-										<small>8 milímetros</small>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-	
-					<div class="col">
-						<div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
-							style="background-image: url('/assets/img/espelho/espelho-bisotado.jpg');">
-							<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-								<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Espelhos customizados</h3>
-								<p>Amplie a luminosidade e a elegância do seu ambiente com os melhores espelhos</p>
-								<ul class="d-flex list-unstyled mt-auto">
-									<li class="d-flex align-items-center me-3">
-										<i class="bi bi-palette-fill me-1"></i>
-										<small>Lapidado, bisotado</small>
-									</li>
-									<li class="d-flex align-items-center">
-										<i class="bi bi-rulers me-1"></i>
-										<small>3 e 4 milímetros</small>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-	
-					<div class="col">
-						<div class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
-							style="background-image: url('/assets/img/porta/porta-4-folhas.jpg');">
-							<div class="d-flex flex-column h-100 text-white p-5 pb-3 text-shadow-1">
-								<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Portas e janelas em vidro temperado</h3>
-								<p>Sofisticação e elegância com portas de vidro temperado sob medida.</p>
-								<ul class="d-flex list-unstyled mt-auto">
-									<li class="d-flex align-items-center me-3">
-										<i class="bi bi-palette-fill me-1"></i>
-										<small>Cores diversas</small>
-									</li>
-									<li class="d-flex align-items-center">
-										<i class="bi bi-rulers me-1"></i>
-										<small>8 milímetros</small>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-	
-		</div>
-	
-	
-		<div class="container px-4 py-5">
-			<h2 class="pb-2 border-bottom">O que nossos clientes dizem</h2>
+    <div class="container px-4 py-5" id="icon-grid">
+      <h2 class="pb-2 border-bottom">Vantagens dos nossos serviços</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+          >
+            <i class="bi bi-shield-fill-check"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Empresa confiável</h3>
+            <ul>
+              <li>Em dia com todos os órgãos fiscalizadores.</li>
+              <li>Preço competitivo.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+          >
+            <i class="bi bi-gem"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Qualidade garantida</h3>
+            <ul>
+              <li>
+                Supervisão periódica dos funcionários, com foco na satisfação do
+                cliente.
+              </li>
+              <li>Equipamentos adequados para cada tipo de serviço.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div
+            class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
+          >
+            <i class="bi bi-award"></i>
+          </div>
+          <div>
+            <h3 class="fs-3 text-body-emphasis">Profissionais experientes</h3>
+            <ul>
+              <li>Processo rigoroso de seleção de profissionais.</li>
+              <li>Avaliações e treinamentos regulares.</li>
+              <li>Uniformizados e com boa aparência.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			<div class="row g-4 py-5 row-cols-1 row-cols-lg-3 row-cols-md-3">
-				{reviews.map((item, index) => ( 
-				<div class="col-sm-12 col-lg-3 mb-4 mb-md-0 d-grid">
-						<div class="card p-4 border-0 bg-light"> 
-								<div class="card-body py-4 mt-2 text-center">
-										<div class="d-flex justify-content-center mb-4">
-												<img src={item.image} class="rounded-circle shadow-1-strong" width="100" height="100" alt="User Image" />
-										</div>
-										<h5 class="font-weight-bold">{item.name}</h5>
-										<ul class="list-unstyled d-flex justify-content-center">
-												{[...Array(item.rate)].map((_, i) => ( 
-														<li >
-																<span class="bi bi-star-fill text-primary me-1"></span>
-														</li>
-												))}
-										</ul>
-										<p class="mb-2">
-												<i class="bi bi-quote me-1"></i>{item.comment}
-										</p>
-								</div>
-						</div>
-				</div>				
-		))}
-		
+    <div class="bg-light">
+      <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="pb-2 border-bottom">Nossos serviços</h2>
 
-			</div>
-		</div>
-	
-		<div class="bg-light">
-			<div class="container px-4 py-3" id="custom-cards">
-				<div class="row g-4 py-5 ">
-					<div class="d-flex align-items-center flex-column flex-lg-row justify-content-center marcas">
-						<Image src={newTemper} style="height: min-content;" alt="logo empresa new temper"/>
-						<Image src={al} style="height: min-content;" alt="logo empresa Al"/>
-						<Image src={makit} style="height: min-content; background-blend-mode: overlay;"
-							alt="logo empresa Makit"/>
-					</div>
-				</div>
-	
-			</div>
-		</div>
-	
-	
-	</main>
-	
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
+              style="background-image: url('/assets/img/box/box-frontal-em-vidro-incolor.jpg');"
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3
+                  class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold rounded-end-3 pb-2 ps-2"
+                >
+                  Boxes Frontais
+                </h3>
+                <p>
+                  Temos os melhores boxes frontal e de canto para sua residencia
+                </p>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-palette-fill me-1"></i>
+                    <small>Cores diversas</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-rulers me-1"></i>
+                    <small>8 milímetros</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
+              style="background-image: url('/assets/img/espelho/espelho-bisotado.jpg');"
+            >
+              <div
+                class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                  Espelhos customizados
+                </h3>
+                <p>
+                  Amplie a luminosidade e a elegância do seu ambiente com os
+                  melhores espelhos
+                </p>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-palette-fill me-1"></i>
+                    <small>Lapidado, bisotado</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-rulers me-1"></i>
+                    <small>3 e 4 milímetros</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-cover h-100 overflow-hidden rounded-4 shadow-lg background-blend-custom"
+              style="background-image: url('/assets/img/porta/porta-4-folhas.jpg');"
+            >
+              <div
+                class="d-flex flex-column h-100 text-white p-5 pb-3 text-shadow-1"
+              >
+                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+                  Portas e janelas em vidro temperado
+                </h3>
+                <p>
+                  Sofisticação e elegância com portas de vidro temperado sob
+                  medida.
+                </p>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="d-flex align-items-center me-3">
+                    <i class="bi bi-palette-fill me-1"></i>
+                    <small>Cores diversas</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <i class="bi bi-rulers me-1"></i>
+                    <small>8 milímetros</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container px-4 py-5">
+      <h2 class="pb-2 border-bottom">O que nossos clientes dizem</h2>
+
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 row-cols-md-3">
+        {
+          reviews.map((item, index) => (
+            <div class="col-sm-12 col-lg-3 mb-4 mb-md-0 d-grid">
+              <div class="card p-4 border-0 bg-light">
+                <div class="card-body py-4 mt-2 text-center">
+                  <div class="d-flex justify-content-center mb-4">
+                    <img
+                      src={item.image}
+                      class="rounded-circle shadow-1-strong"
+                      width="100"
+                      height="100"
+                      alt="User Image"
+                    />
+                  </div>
+                  <h5 class="font-weight-bold">{item.name}</h5>
+                  <ul class="list-unstyled d-flex justify-content-center">
+                    {[...Array(item.rate)].map((_, i) => (
+                      <li>
+                        <span class="bi bi-star-fill text-primary me-1" />
+                      </li>
+                    ))}
+                  </ul>
+                  <p class="mb-2">
+                    <i class="bi bi-quote me-1" />
+                    {item.comment}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="bg-light">
+      <div class="container px-4 py-3" id="custom-cards">
+        <div class="row g-4 py-5">
+          <div
+            class="d-flex align-items-center flex-column flex-lg-row justify-content-center marcas"
+          >
+            <Image
+              src={newTemper}
+              style="height: min-content;"
+              alt="logo empresa new temper"
+            />
+            <Image
+              src={al}
+              style="height: min-content;"
+              alt="logo empresa Al"
+            />
+            <Image
+              src={makit}
+              style="height: min-content; background-blend-mode: overlay;"
+              alt="logo empresa Makit"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	.feature-icon {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.75rem;
-}
+  .feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+  }
 
-.bg-custom {
-  background-image: url("/assets/img/misc/bela-vista-de-um-lago-azul-capturada-do-interior-de-uma-villa.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
+  .bg-custom {
+    background-image: url("/assets/img/misc/bela-vista-de-um-lago-azul-capturada-do-interior-de-uma-villa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 
-.icon-square {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 0.75rem;
-}
+  .icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+  }
 
-.background-blend-custom {
-  background-color: #002a66;
-  background-blend-mode: overlay;
-  background-size: cover;
-}
+  .background-blend-custom {
+    background-color: #002a66;
+    background-blend-mode: overlay;
+    background-size: cover;
+  }
 
-.marcas img[src] {
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all 0.9s ease-out;
-}
-.marcas img:hover {
-  opacity: 1;
-  transition: all 0.9s ease-out;
-}
-.glass-effect {
-  background: rgba (130, 208, 246, 0.34);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(13.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-
+  .marcas img[src] {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.9s ease-out;
+  }
+  .marcas img:hover {
+    opacity: 1;
+    transition: all 0.9s ease-out;
+  }
+  .glass-effect {
+    background: rgba (130, 208, 246, 0.34);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
 </style>
-
