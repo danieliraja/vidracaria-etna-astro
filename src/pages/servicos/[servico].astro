@@ -15,15 +15,14 @@ const data = servicos.find((s: any) => s.rota === servico);
 const imageList = images.filter((i: any) => i.dir === servico);
 ---
 
-<Layout title={`Etna Vidros - ${servico}`}>
+<Layout
+  title={`Etna Vidros - ${servico.charAt(0).toUpperCase() + servico.slice(1)}`}
+>
   <main class="bg-light">
     <div class="container px-4 py-5">
       <h2 class="pb-2 border-bottom">{data?.produto}</h2>
       <div class="row d-flex justify-content-center align-items-stretch g-4">
-        <div
-          class="d-flex col-md-6 col-sm-12 mt-5"
-          id="my-gallery"
-        >
+        <div class="d-flex col-md-6 col-sm-12 mt-5" id="my-gallery">
           <ul class="wrapper list-unstyled">
             {
               imageList.map((image: any) => (
